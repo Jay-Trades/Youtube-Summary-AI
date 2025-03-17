@@ -21,7 +21,7 @@ class Summarizer:
             {"role": "user", "content": f"Please provide ONLY a accurate summary with nothing else of the following transcript that highlights all the major points:\n\n{text}"}
         ]
         response = openai.chat.completions.create(
-            model='gpt-4',
+            model='gpt-4o-mini',
             messages=messages,
             max_tokens=4096,
             temperature=0.7,
@@ -29,5 +29,5 @@ class Summarizer:
             stop=None,
         )
         print(response)
-        summary = response.choices[0].message['content'].strip()
+        summary = response.choices[0].message
         return summary

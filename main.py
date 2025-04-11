@@ -1,5 +1,5 @@
-from TranscriptFetcher import TranscriptFetcher 
-from Summarizer import Summarizer
+from services.TranscriptFetcher import TranscriptFetcher 
+from services.Summarizer import Summarizer
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 

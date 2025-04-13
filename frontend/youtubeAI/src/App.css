@@ -1,0 +1,115 @@
+/* Outer container for the entire page, centered on screen */
+.summarizer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  margin: 2rem auto; /* add space above/below, auto-center left/right */
+  padding: 0 1rem; /* small horizontal padding (for narrow screens) */
+  max-width: 800px; /* limit how wide the content can get */
+}
+
+/* Main title styling */
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Centered "instruction" box */
+.instructions-box {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instructions-box p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Search bar container: positioned so we can place an icon on the right */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* keep it narrower */
+  margin-bottom: 1rem;
+}
+
+/* The text input itself */
+.url-input {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #f2f0fa;
+}
+
+/* The little magnifying-glass (search) icon on the right */
+.search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  font-size: 1.2rem; /* Larger icon size */
+}
+
+/* Button container below the search bar */
+.button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; /* spacing between buttons */
+  margin-bottom: 2rem; /* space below */
+}
+
+/* Purple Summarize button */
+.summarize-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #a391f3;
+  color: #fff;
+  cursor: pointer;
+}
+
+.summarize-button:hover {
+  opacity: 0.9;
+}
+
+/* Yellow "Current Industry" button */
+.industry-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1c232;
+  color: #000;
+  cursor: pointer;
+}
+
+.industry-button:hover {
+  opacity: 0.9;
+}
+
+/* Summary box: bigger, with gray background */
+.summary-box {
+  width: 100%;
+  max-width: 600px;
+  min-height: 250px;
+  background-color: #dcdcdc;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  white-space: pre-wrap; /* preserve line breaks from text */
+}
